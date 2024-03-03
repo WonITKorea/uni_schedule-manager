@@ -1,31 +1,5 @@
-### 2021년 2학기 죽전 교양과목
-POST https://webinfo.dankook.ac.kr/tiac/univ/lssn/lpci/views/lssnPopup/tmtbl.do
+POST https://www.changwon.ac.kr/portal/ad/sm/calendar/selectCalendarList.do
 Content-Type: application/x-www-form-urlencoded
 Accept: application/json
 
-yy=2021&semCd=2&qrySxn=2&curiCparCd=&lesnPlcCd=1&mjSubjKnm=&mjDowCd=&grade=&pfltNm=
-
-### 2021년 2학기 천안 교양과목
-POST https://webinfo.dankook.ac.kr/tiac/univ/lssn/lpci/views/lssnPopup/tmtbl.do
-Content-Type: application/x-www-form-urlencoded
-Accept: application/json
-
-yy=2021&semCd=2&qrySxn=2&curiCparCd=&lesnPlcCd=2&mjSubjKnm=&mjDowCd=&grade=&pfltNm=
-
-### 2021년 2학기 교양검색 - 공통교양
-POST https://webinfo.dankook.ac.kr/tiac/univ/lssn/lpci/views/lssnPopup/tmtbl.do
-Content-Type: application/x-www-form-urlencoded
-Accept: application/json
-
-yy=2021&semCd=2&qrySxn=2&curiCparCd=14190&lesnPlcCd=1&mjSubjKnm=&mjDowCd=&grade=&pfltNm=
-
-###
-
-### 2021년 2학기 전공검색
-POST https://webinfo.dankook.ac.kr/tiac/univ/lssn/lpci/views/lssnPopup/tmtbl.do
-Content-Type: application/x-www-form-urlencoded
-Accept: application/json
-
-yy=2021&semCd=2&qrySxn=1&curiCparCd=&lesnPlcCd=1&colgCd=&dpmtCd=&mjSubjKnm=&mjDowCd=&grade=&pfltNm=
-
-###
+dateFirst=2024%2F03%2F01&dateEnmt=2024%2F06%2F21
