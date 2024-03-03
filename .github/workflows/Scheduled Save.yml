@@ -1,0 +1,39 @@
+name: "Schedule Save"
+
+on:
+  schedule:
+    # 1시간 마다 실행
+    - cron: '0 */1 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    # ubuntu imageFmf tkdydgksek.
+    runs-on: ubuntu-latest
+
+    steps:
+      # 현재 repository로 checkout
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ github.head_ref }}
+
+      # node를 사용한다.
+      - uses: actions/setup-node@v2
+
+      # 패키지를 설치하고, build하고, build된걸 실행하는 과정이라고 보면 된다.
+      - name: Data Save
+        run:
+            cd .packages/dku-schedule-cralwer
+            yarn install
+            yarn build
+            yarn start:prod
+            cd ../..
+ # 저장된 json파일을 github repository에 push 한다.
+      - name: Commit And Push
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          author_email: junil.h@kakao.com
+          author_name: JunilHwang
+          branch: master
