@@ -23,12 +23,12 @@ jobs:
 
       # 패키지를 설치하고, build하고, build된걸 실행하는 과정이라고 보면 된다.
       - name: Data Save
-        run:
-            cd .packages/dku-schedule-cralwer
-            yarn install
-            yarn build
-            yarn start:prod
-            cd ../..
+        run: |
+          cd .packages/dku-schedule-cralwer
+          yarn install
+          yarn build
+          yarn start:prod
+          cd ../..
  # 저장된 json파일을 github repository에 push 한다.
       - name: Commit And Push
         uses: actions-js/push@master
